@@ -1,0 +1,25 @@
+networks:
+- name: concourse
+  subnets:
+  - azs:
+    - az1
+    cloud_properties:
+      name: PCF_Production_Control_Plane
+    dns:
+    - 192.168.10.40
+    gateway: 192.168.204.1
+    range: 192.168.204.0/24
+    reserved:
+    - 192.168.204.1-192.168.204.10
+    static:
+    - 192.168.204.20
+    - 192.168.204.21
+    - 192.168.204.22
+  type: manual
+
+vm_types:
+- cloud_properties:
+    cpu: 4
+    disk: 102400
+    ram: 16384
+  name: concourse_worker

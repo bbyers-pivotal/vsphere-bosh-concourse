@@ -1,0 +1,16 @@
+deployment_name: concourse
+availability_zone: ["az1"]
+network_name: concourse
+web_network_name: concourse
+external_host: concourse.pcf.cloud
+external_url: https://concourse.pcf.cloud
+web_vm_type: medium
+db_vm_type: large
+worker_vm_type: concourse_worker
+db_persistent_disk_type: 102400
+local_user:
+  username: admin
+  password: admin123 #can be replaced with value in OpsMan Director credhub such as ((concourse_admin_password))
+web_instances: 3
+worker_instances: 3
+web_ip: [192.168.204.20,192.168.204.21,192.168.204.22]

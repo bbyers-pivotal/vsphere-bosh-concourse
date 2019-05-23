@@ -1,0 +1,11 @@
+- type: replace
+  path: /instance_groups/name=web/azs
+  value: ((availability_zone))
+
+- type: replace
+  path: /instance_groups/name=db/azs
+  value: ((availability_zone))
+
+- type: replace
+  path: /instance_groups/name=worker/azs
+  value: ((availability_zone))
